@@ -1,0 +1,29 @@
+<div [ngClass]="{myclass:flag}">
+    <h1>Inside Ptab HTML</h1>
+
+    Name : {{name}} <br>
+    Salaray : {{sal}} <br>
+    Flag : {{flag}} <br>
+
+    <button type="button" name="btn" (click)="changeFlag()">Click Me</button>
+
+    <br><br>
+
+    <div *ngIf="flag">
+        <input type="text" name="nm" [(ngModel)]="name">
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <th>number</th>
+                <th>Alphabet</th>
+            </tr>
+            <tr *ngFor="let ob of arr">
+                <td>{{ob.num}}</td>
+                <td>{{ob.alpha}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
